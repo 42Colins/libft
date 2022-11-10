@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cprojean <cprojean@42lyon.fr>              +#+  +:+       +#+        */
+/*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 16:03:39 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/09 17:44:21 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/10 13:38:26 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	ft_isascii(int c);
 int	ft_isdigit(int c);
 
 //ft_isprint
-int	ft_isprint(int c)
+int	ft_isprint(int c);
 
 //ft_strchr
 char	*strchr(const char *s, int c);
