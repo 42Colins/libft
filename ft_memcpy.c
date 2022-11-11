@@ -6,7 +6,7 @@
 /*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 10:40:38 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/10 13:52:41 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/11 10:51:24 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	char	*array;
 
 	i = 0;
-	array = (char	*)src;
+	array = (char *) src;
 	str = dst;
 	runner = ft_strlen(dst);
 	index = ft_strlen(src);

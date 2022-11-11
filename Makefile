@@ -6,7 +6,7 @@
 #    By: cprojean <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/10 14:30:05 by cprojean          #+#    #+#              #
-#    Updated: 2022/11/10 19:18:43 by cprojean         ###   ########.fr        #
+#    Updated: 2022/11/11 10:55:49 by cprojean         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,8 +14,10 @@ NAME = libft.a
 
 CFLAGS = -Wall -Werror -Wextra
 
-SRCS =			ft_atoi.c \
-				ft_bzero.c\
+rm = rm -rf
+
+SRCS =		ft_atoi.c     \
+			ft_bzero.c    \
 			ft_isalnum.c  \
 			ft_isalpha.c  \
 			ft_isascii.c  \
@@ -33,7 +35,8 @@ SRCS =			ft_atoi.c \
 			ft_strrchr.c  \
 			ft_tolower.c  \
 			ft_toupper.c  \
-			
+
+OBJS = ${SRCS;.c=.o}
 
 all:
 
