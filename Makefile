@@ -6,13 +6,17 @@
 #    By: cprojean <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/10 14:30:05 by cprojean          #+#    #+#              #
-#    Updated: 2022/11/11 11:14:40 by cprojean         ###   ########.fr        #
+#    Updated: 2022/11/11 15:53:29 by cprojean         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
+CC = cc
+
 CFLAGS = -Wall -Werror -Wextra
+
+ARFLAGS = rcs
 
 rm = rm -rf
 
@@ -35,12 +39,16 @@ SRCS =		ft_atoi.c     \
 			ft_strrchr.c  \
 			ft_tolower.c  \
 			ft_toupper.c  \
+			ft_memcmp.c   \
+			ft_memchr.c   \
 
-OBJS = ${SRCS;.c=.o}
+OBJS =
+			${SRCS;.c=.o}
+			
+%.o : %.c
+			$(CC) -c $(CFLAGS) $(CPPFLAGS) $< -o $@
 
 all:
-
-re:
 
 clean:
 			${RM} ${OBJS}
@@ -48,3 +56,6 @@ clean:
 fclean:
 			clean
 			${RM} ${NAME}
+
+re :
+			fclean all
