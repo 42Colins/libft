@@ -6,7 +6,7 @@
 /*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 10:40:38 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/11 10:51:24 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/11 11:52:39 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	int		runner;
-	int		index;
 	int		i;
 	char	*str;
 	char	*array;
@@ -23,13 +21,9 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	i = 0;
 	array = (char *) src;
 	str = dst;
-	runner = ft_strlen(dst);
-	index = ft_strlen(src);
 	while ((size_t)i < n)
 	{
-		str[runner] = (char)array[index];
-		runner--;
-		index--;
+		str[i] = (char)array[i];
 		i++;
 	}
 	return (&str[0]);

@@ -1,39 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/10 14:30:09 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/11 11:51:16 by cprojean         ###   ########.fr       */
+/*   Created: 2022/11/11 11:54:32 by cprojean          #+#    #+#             */
+/*   Updated: 2022/11/11 13:08:25 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src,size_t len)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	int		runner;
-	int		index;
 	int		i;
-	char	*str;
 	char	*array;
 
+	array = (char *)s;
 	i = 0;
-	array = (char *) src;
-	str = dst;
-	runner = ft_strlen(dst);
-	index = ft_strlen(src);
-	while ((size_t)i < len)
+	while (((size_t) i <= n) && (array[i] != '\0'))
 	{
-		if (dst < src)
-			str[runner] = (char)array[index];
-		else
-			str[i] = (char)array[runner];
-		runner--;
-		index--;
+		if (array[i] == c)
+			return (&array[i]);
 		i++;
 	}
-	return (&str[0]);
+	return (NULL);
 }
