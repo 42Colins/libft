@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: cprojean <cprojean@42lyon.fr>              +#+  +:+       +#+         #
+#    By: cprojean <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/10 14:30:05 by cprojean          #+#    #+#              #
-#    Updated: 2022/11/12 16:15:22 by cprojean         ###   ########.fr        #
+#    Updated: 2022/11/13 14:39:02 by cprojean         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,12 +16,15 @@ CC = cc
 
 CFLAGS = -Wall -Werror -Wextra
 
+HEADERS = libft.h
+
 ARFLAGS = rcs
 
 rm = rm -rf
 
 SRCS =		ft_atoi.c     \
 			ft_bzero.c    \
+			ft_calloc.c   \
 			ft_isalnum.c  \
 			ft_isalpha.c  \
 			ft_isascii.c  \
@@ -45,11 +48,13 @@ SRCS =		ft_atoi.c     \
 
 OBJS =
 			${SRCS;.c=.o}
-			
-%.o : %.c
-			$(CC) -c $(CFLAGS) $(CPPFLAGS) $< -o $@
 
-all:
+$(NAME) =	ar ${ARFLAGS} ${OBJS}
+
+%.o : %.c	${HEADERS}
+			$(CC) -c $(CFLAGS) $< -o $@
+
+all:		${NAME}
 
 clean:
 			${RM} ${OBJS}
