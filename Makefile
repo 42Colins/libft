@@ -6,7 +6,7 @@
 #    By: cprojean <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/10 14:30:05 by cprojean          #+#    #+#              #
-#    Updated: 2022/11/13 14:39:02 by cprojean         ###   ########.fr        #
+#    Updated: 2022/11/13 14:51:08 by cprojean         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,9 +49,10 @@ SRCS =		ft_atoi.c     \
 OBJS =
 			${SRCS;.c=.o}
 
-$(NAME) =	ar ${ARFLAGS} ${OBJS}
+${NAME} =	${OBJS}
+			ar ${ARFLAGS} ${NAME} ${OBJS}
 
-%.o : %.c	${HEADERS}
+%.o : %.c	${SRCS}
 			$(CC) -c $(CFLAGS) $< -o $@
 
 all:		${NAME}
@@ -59,9 +60,7 @@ all:		${NAME}
 clean:
 			${RM} ${OBJS}
 
-fclean:
-			clean
+fclean:		clean
 			${RM} ${NAME}
 
-re :
-			fclean all
+re :	fclean all
