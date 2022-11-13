@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cprojean <cprojean@42lyon.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 16:03:39 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/11 10:59:10 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/12 16:25:55 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,5 +67,9 @@ void	ft_bzero(void *s, size_t n);
 
 //ft_memset
 void	*ft_memset(void *b, int c, size_t len);
+
+//ft_strdup
+char    *ft_strdup(const char *s1);
+
 
 #endif

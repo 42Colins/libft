@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: cprojean <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: cprojean <cprojean@42lyon.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/10 14:30:05 by cprojean          #+#    #+#              #
-#    Updated: 2022/11/11 15:53:29 by cprojean         ###   ########.fr        #
+#    Updated: 2022/11/12 16:15:22 by cprojean         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,6 +41,7 @@ SRCS =		ft_atoi.c     \
 			ft_toupper.c  \
 			ft_memcmp.c   \
 			ft_memchr.c   \
+			ft_strdup.c   \
 
 OBJS =
 			${SRCS;.c=.o}
