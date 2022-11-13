@@ -6,7 +6,7 @@
 #    By: cprojean <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/10 14:30:05 by cprojean          #+#    #+#              #
-#    Updated: 2022/11/13 14:53:25 by cprojean         ###   ########.fr        #
+#    Updated: 2022/11/13 14:54:08 by cprojean         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,7 @@ SRCS =		ft_atoi.c     \
 			ft_memchr.c   \
 			ft_strdup.c   \
 
-OBJS =		${SRCS;.c=.o}
+OBJS =		${SRCS:.c=.o}
 
 all:		${NAME}
 
