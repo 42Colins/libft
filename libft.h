@@ -6,7 +6,7 @@
 /*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 16:03:39 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/13 15:14:51 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/13 16:08:41 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,9 @@
 
 //ft_strlen
 int		ft_strlen(const char *s);
+
+//ft_calloc
+void	*ft_calloc(size_t count, size_t size);
 
 //ft_atoi
 int		ft_atoi(const char *str);
