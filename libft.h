@@ -6,7 +6,7 @@
 /*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 16:03:39 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/13 16:08:41 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/13 16:46:21 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,18 @@ void	ft_bzero(void *s, size_t n);
 
 //ft_memset
 void	*ft_memset(void *b, int c, size_t len);
+
+//ft_memchr
+void	*ft_memchr(const void *s, int c, size_t n);
+
+//ft_memcmp
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
+
+//ft_memcpy
+void	*ft_memcpy(void *dst, const void *src, size_t n);
+
+//ft_memmove
+void	*ft_memmove(void *dst, const void *src, size_t len);
 
 //ft_strdup
 char	*ft_strdup(const char *s1);
