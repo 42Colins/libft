@@ -6,7 +6,7 @@
 /*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 13:07:22 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/13 16:30:11 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/13 16:51:32 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,11 @@ int	ft_atoi(const char *str)
 	while ((9 <= str[index] && str[index] <= 13) || (str[index] == 32))
 		index++;
 	while ((str[index] == '+') || (str[index] == '-'))
+	{
 		if (str[index] == '-')
 			count++;
 		index++;
+	}
 	while ('0' <= str[index] && str[index] <= '9')
 	{
 		answer = answer * 10 + str[index];

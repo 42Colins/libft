@@ -6,13 +6,13 @@
 /*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 13:19:41 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/09 12:18:50 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/13 16:49:43 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	int	runner;
 	int	pos;

@@ -6,7 +6,7 @@
 /*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 16:03:39 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/13 16:46:21 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/13 16:50:28 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int		ft_isdigit(int c);
 int		ft_isprint(int c);
 
 //ft_strchr
-char	*strchr(const char *s, int c);
+char	*ft_strchr(const char *s, int c);
 
 //ft_strlcat
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
@@ -57,7 +57,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
 //ft_strrchr
-char	*strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
 
 //ft_tolower
 int		ft_tolower(int c);
