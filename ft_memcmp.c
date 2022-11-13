@@ -6,7 +6,7 @@
 /*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 13:12:20 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/13 14:57:16 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/13 15:12:43 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int	i;
+	int		i;
 	char	*array;
 	char	*string;
 
