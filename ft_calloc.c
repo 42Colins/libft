@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/12 16:15:30 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/13 12:56:24 by cprojean         ###   ########.fr       */
+/*   Created: 2022/11/13 12:53:52 by cprojean          #+#    #+#             */
+/*   Updated: 2022/11/13 13:32:08 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strdup(const char *s1)
+void	*ft_calloc(size_t count, size_t size)
 {
-    int     size;
-    int     runner;
-    char    *dup;
+	char	*calloc;
 
-    runner = 0;
-    size = ft_strlen(s1);
-    dup = malloc(sizeof(char) * size + 1);
-	if (dup = 0)
+	if (((size * count) / SIZE_MAX) > 1)
 		return (0);
-    while (runner <= size)
-    {
-        dup[runner] = s1[runner];
-    }
-    return (dup);
+	calloc = malloc(size * count + 1);
+	if (calloc == 0)
+		return (0);
+	ft_bzero(calloc, count);
+	return (calloc);
 }
