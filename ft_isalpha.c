@@ -6,13 +6,13 @@
 /*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 12:53:41 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/13 15:22:21 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/13 17:04:39 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isaplha(int c)
+int	ft_isalpha(int c)
 {
 	if ('a' <= c && c <= 'z')
 		return (1);
