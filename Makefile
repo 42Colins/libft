@@ -6,7 +6,7 @@
 #    By: cprojean <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/10 14:30:05 by cprojean          #+#    #+#              #
-#    Updated: 2022/11/13 15:02:16 by cprojean         ###   ########.fr        #
+#    Updated: 2022/11/13 16:30:44 by cprojean         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,4 +62,4 @@ clean:
 fclean:		clean
 			${RM} ${NAME}
 
-re :	fclean all
+re :		fclean all
