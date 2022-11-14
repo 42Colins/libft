@@ -6,7 +6,7 @@
 #    By: cprojean <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/10 14:30:05 by cprojean          #+#    #+#              #
-#    Updated: 2022/11/13 16:30:44 by cprojean         ###   ########.fr        #
+#    Updated: 2022/11/14 16:33:16 by cprojean         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,7 +53,7 @@ all:		${NAME}
 ${NAME} :	${OBJS}
 			ar ${ARFLAGS} ${NAME} ${OBJS}
 
-%.o : %.c	${SRCS} ${HEADERS}
+%.o : %.c	Makefile ${HEADERS}
 			$(CC) -c $(CFLAGS) $< -o $@
 
 clean:
