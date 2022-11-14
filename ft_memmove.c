@@ -6,7 +6,7 @@
 /*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 14:30:09 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/13 15:13:26 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/14 11:36:03 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,3 +37,10 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (&str[0]);
 }
+
+/*int main()
+{
+	char src;
+
+}
+*/
