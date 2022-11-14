@@ -6,7 +6,7 @@
 /*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 13:16:00 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/14 14:47:13 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/14 17:46:48 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[index] = '\0';
 	return (index);
 }
-
+/*
 int main()
 {
 	char 	*dst = "a";
@@ -45,3 +45,4 @@ int main()
 	printf("%zu\n", strlcat(dest, str, dstsize));
 	printf("%s\n", dest);
 }
+*/

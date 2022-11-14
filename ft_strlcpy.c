@@ -6,7 +6,7 @@
 /*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 15:51:24 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/09 12:25:41 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/14 18:34:37 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,21 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 
 	index = 0;
 	if (dstsize == 0)
-		return (index);
-	if ((size_t)ft_strlen(dst) < dstsize)
-		return (index);
-	if ((size_t)ft_strlen(src) < dstsize)
-		return (index);
-	while ((size_t)index < dstsize)
+		return (ft_strlen(src));
+	while (((size_t)index < dstsize - 1) && (src[index]))
 	{
 		dst[index] = src[index];
 		index++;
 	}
 	dst[index] = '\0';
-	return (index);
+	return (ft_strlen(src));
 }
+/*
+int main()
+{
+	char	dst[15];
+	char	src[15];
+
+	printf("%zu\n", ft_strlcpy(dst, "lorem", 15));
+	printf("%lu", strlcpy(src, "lorem", 15));
+}*/
