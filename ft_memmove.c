@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cprojean <cprojean@42lyon.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 14:30:09 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/14 11:36:03 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/15 11:51:54 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,33 +14,35 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	int		runner;
-	int		index;
 	int		i;
 	char	*str;
 	char	*array;
 
-	i = 0;
+	i = len;
 	array = (char *) src;
 	str = dst;
-	runner = ft_strlen(dst);
-	index = ft_strlen(src);
-	while ((size_t)i < len)
-	{
-		if (dst < src)
-			str[runner] = (char)array[index];
-		else
-			str[i] = (char)array[runner];
-		runner--;
-		index--;
-		i++;
+	if (src < dst){
+		while (i > 0)
+		{
+			str[i - 1] = (char)array[i - 1];
+			i--;
+		}
 	}
-	return (&str[0]);
+	else
+	{
+		ft_memcpy(dst, src, len);
+	}
+	return (dst);
 }
-
-/*int main()
+/*
+int main()
 {
-	char src;
+	void *dst;
+	const void *src;
+	size_t len;
 
-}
-*/
+	len = 15;
+	dst = "conjecteture";
+	printf("%p", ft_memmove(dst, src, len));
+}*/
+
