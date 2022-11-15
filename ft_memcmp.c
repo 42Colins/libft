@@ -6,7 +6,7 @@
 /*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 13:12:20 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/13 15:12:43 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/15 13:17:38 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	array = (char *)s1;
 	string = (char *)s2;
 	i = 0;
-	while ((size_t) i <= n)
+	while ((size_t) i < n)
 	{
 		if (array[i] != string[i])
-			return (s1 - s2);
+			return ((unsigned char)array[i] - (unsigned char)string[i]);
 		i++;
 	}
 	return (0);

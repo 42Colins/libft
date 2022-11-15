@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cprojean <cprojean@42lyon.fr>              +#+  +:+       +#+        */
+/*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 14:30:09 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/15 11:51:54 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/15 13:19:32 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	i = len;
 	array = (char *) src;
 	str = dst;
-	if (src < dst){
+	if (src < dst)
+	{
 		while (i > 0)
 		{
 			str[i - 1] = (char)array[i - 1];
@@ -45,4 +46,3 @@ int main()
 	dst = "conjecteture";
 	printf("%p", ft_memmove(dst, src, len));
 }*/
-
