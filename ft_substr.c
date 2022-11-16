@@ -6,7 +6,7 @@
 /*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 11:23:52 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/16 13:48:30 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/16 13:51:36 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	index = 0;
 	size = ft_strlen(s);
 	if (start >= size)
-		return (NULL);
+		return (ft_strdup(""));
 	size = size - start;
 	if (size > len)
 		size = len;
@@ -29,7 +29,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!array)
 		return (NULL);
 	if (len < size)
-		return (NULL);
+		return (ft_strdup(""));
 	while ((size_t)index < size && s[start + index])
 	{
 		array[index] = s[start + index];
