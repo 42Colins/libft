@@ -6,7 +6,7 @@
 /*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 16:03:39 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/16 11:44:32 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/16 13:57:34 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,5 +89,9 @@ char	*ft_strdup(const char *s1);
 
 //ft_substr
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+
+//ft_strjoin
+char	*ft_strjoin(char const *s1, char const *s2);
+
 
 #endif
