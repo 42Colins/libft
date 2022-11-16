@@ -6,7 +6,7 @@
 /*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 15:51:24 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/14 18:34:37 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/16 13:29:08 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	int	index;
+	size_t	index;
 
 	index = 0;
 	if (dstsize == 0)
 		return (ft_strlen(src));
-	while (((size_t)index < dstsize - 1) && (src[index]))
+	while ((index < dstsize - 1) && (src[index]))
 	{
 		dst[index] = src[index];
 		index++;

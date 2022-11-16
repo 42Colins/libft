@@ -6,7 +6,7 @@
 /*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 16:03:39 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/14 11:16:38 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/16 11:44:32 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,4 +86,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len);
 
 //ft_strdup
 char	*ft_strdup(const char *s1);
+
+//ft_substr
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+
 #endif
