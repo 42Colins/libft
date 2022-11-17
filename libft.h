@@ -6,7 +6,7 @@
 /*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 16:03:39 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/17 16:39:49 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/17 16:52:21 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@
 # include <string.h>
 # include <stdio.h>
 # include <stdlib.h>
+
+//Part one
+/////////////////
 
 //ft_strlen
 int		ft_strlen(const char *s);
@@ -87,6 +90,9 @@ void	*ft_memmove(void *dst, const void *src, size_t len);
 //ft_strdup
 char	*ft_strdup(const char *s1);
 
+//Part two
+//////////////////
+
 //ft_substr
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 
@@ -97,9 +103,15 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 
 //File descriptors
+//////////////////
 
 //ft_putchar_fd
 void	ft_putchar_fd(char c, int fd);
 
+//ft_putstr_fd
+void	ft_putstr_fd(char *s, int fd);
+
+//ft_putendl_fd
+void	ft_putendl_fd(char *s, int fd);
 
 #endif
