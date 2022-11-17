@@ -6,7 +6,7 @@
 /*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 16:03:39 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/17 16:52:21 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/17 17:23:20 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,5 +113,9 @@ void	ft_putstr_fd(char *s, int fd);
 
 //ft_putendl_fd
 void	ft_putendl_fd(char *s, int fd);
+
+//ft_putnbr_fd
+void	ft_putnbr_fd(int n, int fd);
+
 
 #endif
