@@ -64,4 +64,3 @@ int main()
 	printf("%zu\n", strlcat(dest, str, dstsize));
 	printf("%s\n", dest);
 }*/
-
