@@ -6,7 +6,7 @@
 #    By: cprojean <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/10 14:30:05 by cprojean          #+#    #+#              #
-#    Updated: 2022/11/18 11:34:38 by cprojean         ###   ########.fr        #
+#    Updated: 2022/11/18 16:00:13 by cprojean         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,6 +49,8 @@ SRCS =		ft_atoi.c               \
 			ft_substr.c             \
 			ft_strjoin.c            \
 			ft_strtrim.c            \
+			ft_strmapi.c            \
+			ft_striteri.c           \
 			ft_putchar_fd.c         \
 			ft_putstr_fd.c          \
 			ft_putendl_fd.c         \
