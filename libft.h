@@ -6,7 +6,7 @@
 /*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 16:03:39 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/17 17:23:20 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/18 11:34:13 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,6 +101,10 @@ char	*ft_strjoin(char const *s1, char const *s2);
 
 //ft_strtrim
 char	*ft_strtrim(char const *s1, char const *set);
+
+//ft_itoa
+char	*ft_itoa(int n);
+
 
 //File descriptors
 //////////////////

@@ -6,7 +6,7 @@
 #    By: cprojean <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/10 14:30:05 by cprojean          #+#    #+#              #
-#    Updated: 2022/11/17 17:24:59 by cprojean         ###   ########.fr        #
+#    Updated: 2022/11/18 11:34:38 by cprojean         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,7 @@ ARFLAGS = rcs
 rm = rm -rf
 
 SRCS =		ft_atoi.c               \
+			ft_itoa.c               \
 			ft_bzero.c              \
 			ft_calloc.c             \
 			ft_isalnum.c            \
