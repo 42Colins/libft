@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cprojean <cprojean@42lyon.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 16:03:39 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/18 15:59:56 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/19 01:15:23 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,6 +110,11 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 
 //ft_striteri
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+
+//ft_split
+char	**ft_split(char *str, char c);
+
+
 
 
 
