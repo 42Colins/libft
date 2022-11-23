@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cprojean <cprojean@42lyon.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 14:30:09 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/15 13:19:32 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/22 15:34:46 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	char	*str;
 	char	*array;
 
+	if (dst == NULL || src == NULL || len == 0)
+		return (NULL);
 	i = len;
 	array = (char *) src;
 	str = dst;
