@@ -6,13 +6,13 @@
 /*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 13:16:45 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/09 12:18:42 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/23 18:56:29 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(const char *s)
+static int	ft_strlen(const char *s)
 {
 	int	index;
 

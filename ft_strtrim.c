@@ -6,7 +6,7 @@
 /*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 14:04:33 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/23 16:09:28 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/23 18:52:56 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int	index;
 
 	count = 0;
-	runner = ft_strlen(s1) - 1;
 	index = 0;
+	runner = ft_strlen(s1) - 1;
+	if (!s1 || !set)
+		return (NULL);
 	while (s1[index] && (ft_trim_st(s1[index], set) == 1))
 	{
 		count++;
@@ -48,15 +50,14 @@ char	*ft_strtrim(char const *s1, char const *set)
 		index++;
 	}
 	size = ((ft_strlen(s1) - (count + index)));
-	if (size == 0)
-		return (ft_strdup(""));
+	if (runner == 0)
+		size = 0;
 	return (ft_substr(s1, count, size));
 }
 
-/*
-int main()
-{
-	char const *s1 = "             ";
-	char const *set = " ";
-	printf("%s", ft_strtrim(s1, set));
-}*/
+ int main()
+ {
+ 	char const *s1 = "";
+ 	char const *set = "";
+ 	printf("%s", ft_strtrim(s1, set));
+ }
