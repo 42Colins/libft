@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cprojean <cprojean@42lyon.fr>              +#+  +:+       +#+        */
+/*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 14:30:09 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/22 15:34:46 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/23 13:33:59 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	char	*str;
 	char	*array;
 
-	if (dst == NULL || src == NULL || len == 0)
-		return (NULL);
 	i = len;
 	array = (char *) src;
 	str = dst;
@@ -37,14 +35,18 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
-/*
-int main()
-{
-	void *dst;
-	const void *src;
-	size_t len;
 
-	len = 15;
-	dst = "conjecteture";
-	printf("%p", ft_memmove(dst, src, len));
-}*/
+// int main()
+// {
+// 	void *dst;
+// 	void *dst2;
+// 	const void *src;
+// 	size_t len;
+
+// 	src = NULL;
+// 	len = 0;
+// 	dst2 = NULL;
+// 	dst = NULL;
+// 	printf("%p\n", memmove(dst2, src, len));
+// 	printf("%p\n", ft_memmove(dst, src, len));
+// }
