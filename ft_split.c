@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cprojean <cprojean@42lyon.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 00:08:37 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/19 17:03:02 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/21 00:37:13 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,24 +21,25 @@ int	how_many_words(char *str, char c)
 	count = 0;
 	while (str[index])
 	{
-		if (str[index] == c && str[index + 1] == c && str[index + 1] != '\0')
+		while (str[index] == c
+			|| (index == 0 && str[index] != c)
+			|| (str[index] == c && str[index + 1] == c
+				&& str[index + 1] != '\0'))
 		{
 			while (str[index] == c)
 				index++;
-			count++;
+			index++;
+			if (str[index - 1] != '\0')
+				count++;
 		}
-		if (((str[index] == c) && (index != 0))
-			|| (str[index] == c && str[index + 1])
-			|| ((str[index] == c) && (str[index + 1] != '\0')))
-			count++;
 		index++;
 	}
-	return (count + 1);
+	return (count);
 }
 
 int	find_char(char *str, char c, int index)
 {
-	if (str[index] == c)
+	while (str[index] == c)
 		index++;
 	while (str[index] && str[index] != c)
 		index++;
@@ -63,7 +64,7 @@ void	ft_filler(char *str, char *dst, int flag, char c)
 	dst[runner] = '\0';
 }
 
-void	free_all(char **str, int runner)
+void	*free_all(char **str, int runner)
 {
 	int	index;
 
@@ -74,6 +75,7 @@ void	free_all(char **str, int runner)
 		runner--;
 	}
 	free(str);
+	return (NULL);
 }
 
 char	**ft_split(char *str, char c)
@@ -86,26 +88,27 @@ char	**ft_split(char *str, char c)
 	index = 0;
 	flag = index;
 	runner = 0;
-	split = malloc(sizeof(char *) * how_many_words(str, c));
+	split = malloc(sizeof(char *) * how_many_words(str, c) + 1);
 	if (!split)
 		return (NULL);
-	while (runner <= how_many_words(str, c) - 1)
+	while (runner < how_many_words(str, c))
 	{
 		flag = index;
 		index = find_char(str, c, index);
 		split[runner] = malloc(sizeof(char) * index - flag + 1);
 		if (!split[runner])
-			return (NULL);
+			free_all(split, runner);
 		ft_filler(str, split[runner], flag, c);
 		runner++;
 	}
+	split[runner] = NULL;
 	return (split);
 }
-
+/*
 int main()
 {
 	int i = 0;
-	char *src = "/salut//cava/super/split/ca/pue";
+	char *src = "///////////////////////////salut//cava/super/split/ca/pue/pas///////////////////";
 	char c = '/';
 	char **split = ft_split(src, c);
 	while (split[i])
@@ -114,4 +117,4 @@ int main()
 		i++;
 	}
 }
-
+*/

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cprojean <cprojean@42lyon.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 12:53:52 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/13 16:08:23 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/23 11:01:15 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,14 @@
 void	*ft_calloc(size_t count, size_t size)
 {
 	char	*calloc;
+	size_t	total;
 
-	if (((size * count) / SIZE_MAX) > 1)
+	total = size * count;git 
+	if (((total) / SIZE_MAX) > 1)
 		return (0);
-	calloc = malloc(size * count + 1);
+	else if (total == 0)
+		total = 1;
+	calloc = malloc(total);
 	if (calloc == 0)
 		return (0);
 	ft_bzero(calloc, count);
