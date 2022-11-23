@@ -6,7 +6,7 @@
 /*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 11:54:32 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/23 14:57:34 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/23 17:02:05 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	int		i;
+	int				i;
 	unsigned char	*array;
 	unsigned char	cast;
 
