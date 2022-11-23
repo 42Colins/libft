@@ -6,7 +6,7 @@
 /*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 12:53:52 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/23 11:07:23 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/23 16:13:31 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,11 @@ void	*ft_calloc(size_t count, size_t size)
 	size_t	total;
 
 	total = size * count;
-	if (((total) / SIZE_MAX) > 1)
-		return (0);
-	else if (total == 0)
-		total = 1;
+	if (count != 0 && (SIZE_MAX / count) < size)
+		return (NULL);
 	calloc = malloc(total);
-	if (calloc == 0)
+	if (!calloc)
 		return (0);
-	ft_bzero(calloc, count);
+	ft_bzero(calloc, total);
 	return (calloc);
 }
