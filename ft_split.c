@@ -6,7 +6,7 @@
 /*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 00:08:37 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/23 13:14:55 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/24 18:07:31 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,15 +107,15 @@ char	**ft_split(char *str, char c)
 	return (split);
 }
 
-// int main()
-// {
-// 	int i = 0;
-// 	char *src = "////rfhgj/";
-// 	char c = '/';
-// 	char **split = ft_split(src, c);
-// 	while (split[i])
-// 	{
-// 		printf("%s\n", split[i]);
-// 		i++;
-// 	}
-// }
+int main()
+{
+	int i = 0;
+	char *src = "hello!zzzzzzzz";
+	char c = 'z';
+	char **split = ft_split(src, c);
+	while (split[i])
+	{
+		printf("%s\n", split[i]);
+		i++;
+	}
+}
