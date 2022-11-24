@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cprojean <cprojean@42lyon.fr>              +#+  +:+       +#+        */
+/*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 16:03:39 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/19 01:15:23 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/24 11:11:29 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,10 +114,6 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 //ft_split
 char	**ft_split(char *str, char c);
 
-
-
-
-
 //File descriptors
 //////////////////
 
@@ -132,6 +128,5 @@ void	ft_putendl_fd(char *s, int fd);
 
 //ft_putnbr_fd
 void	ft_putnbr_fd(int n, int fd);
-
 
 #endif

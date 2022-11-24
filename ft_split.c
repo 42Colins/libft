@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cprojean <cprojean@42lyon.fr>              +#+  +:+       +#+        */
+/*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 00:08:37 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/21 00:37:13 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/23 13:14:55 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,14 +84,16 @@ char	**ft_split(char *str, char c)
 	char	**split;
 	int		index;
 	int		flag;
+	int		words;
 
+	words = how_many_words(str, c);
 	index = 0;
 	flag = index;
 	runner = 0;
-	split = malloc(sizeof(char *) * how_many_words(str, c) + 1);
+	split = malloc(sizeof(char *) * (words + 1));
 	if (!split)
 		return (NULL);
-	while (runner < how_many_words(str, c))
+	while (runner < words)
 	{
 		flag = index;
 		index = find_char(str, c, index);
@@ -104,17 +106,16 @@ char	**ft_split(char *str, char c)
 	split[runner] = NULL;
 	return (split);
 }
-/*
-int main()
-{
-	int i = 0;
-	char *src = "///////////////////////////salut//cava/super/split/ca/pue/pas///////////////////";
-	char c = '/';
-	char **split = ft_split(src, c);
-	while (split[i])
-	{
-		printf("%s\n", split[i]);
-		i++;
-	}
-}
-*/
+
+// int main()
+// {
+// 	int i = 0;
+// 	char *src = "////rfhgj/";
+// 	char c = '/';
+// 	char **split = ft_split(src, c);
+// 	while (split[i])
+// 	{
+// 		printf("%s\n", split[i]);
+// 		i++;
+// 	}
+// }

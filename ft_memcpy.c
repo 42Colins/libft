@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cprojean <cprojean@42lyon.fr>              +#+  +:+       +#+        */
+/*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 10:40:38 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/22 15:35:50 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/23 16:23:37 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	char	*str;
 	char	*array;
 
-	if (src == NULL)
-		return (NULL);
 	i = 0;
+	if (src == NULL && dst == NULL)
+		return (0);
 	array = (char *) src;
 	str = dst;
 	while ((size_t)i < n)

@@ -6,7 +6,7 @@
 /*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 11:54:32 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/14 11:20:30 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/23 17:02:05 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,47 +14,30 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	int		i;
-	char	*array;
+	int				i;
+	unsigned char	*array;
+	unsigned char	cast;
 
-	array = (char *)s;
+	cast = (unsigned char) c;
+	array = (unsigned char *) s;
 	i = 0;
-	while (((size_t) i < n) && (array[i] != '\0'))
+	while ((size_t) i < n)
 	{
-		if (array[i] == c)
+		if (array[i] == cast)
 			return (&array[i]);
 		i++;
 	}
 	return (NULL);
 }
 
-/*void	print(const char *s)
-{
-	int	size;
+// int main ()
+// {
+// 	char s[7] = {0, 1, 2 ,3 ,4 ,5};
 
-	size = 0;
-	while (s[size])
-		size++;
-	write(1, s, size);
-}
-
-int main ()
-{
-	const char *stt;
-	const char *sttr;
-
-	sttr = memchr("bonjourno", 'n', 2);
-	stt = ft_memchr("bonjourno", 'n', 2);
-	if (!stt)
-		print("ERROR");
-	else
-	{
-		print (stt);
-		print ("\n");
-	}
-	if (!sttr)
-		print ("ERROR");
-	else
-		print (sttr);
-}
-*/
+// 	// if (ft_memchr(s, 2 + 256, 3) == NULL)
+// 	// 	printf("NULL\n");
+// 	printf("%p\n", ft_memchr(s, 258, 3));
+// 	if (memchr(s, 2 + 256, 3) == NULL)
+// 		printf("NULL\n");
+// 	printf("%p\n", memchr(s, 258, 3));
+// }
