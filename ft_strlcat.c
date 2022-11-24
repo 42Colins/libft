@@ -41,8 +41,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	if (dstsize == 0)
 		return (ft_strlen(src));
 	start = ft_strlen(dst);
-	if (start >= dstsize)
-		return (start + ft_strlen(src));
+	if (start > dstsize)
+		return (ft_strlen(src) + dstsize);
 	while ((start + index < dstsize - 1) && (src[index] != '\0'))
 	{
 		dst[start + index] = src[index];
@@ -51,16 +51,20 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[index + start] = '\0';
 	return (start + ft_strlen(src));
 }
-/*
-int main()
-{
-	char 	dst[100] = "a";
-	char	dest[100]= "a";
-	const char *str = "lorem ipsum dolor sit amet";
-	size_t	dstsize = 99;
 
-	printf("%zu\n",ft_strlcat(dst, str, dstsize));
-	printf("%s\n", dst);
-	printf("%zu\n", strlcat(dest, str, dstsize));
-	printf("%s\n", dest);
-}*/
+// int main()
+// {
+// 	char 	dst[100] = "abcd";
+// 	char	dest[100]= "abcd";
+// 	const char *str = "pqrstuvwxyz";
+// 	size_t	dstsize = 0;
+// 	while (dstsize < 11)
+// 	{
+// 		printf("MINE :%zu\n",ft_strlcat(dst, str, dstsize));
+// 		printf("MINE :%s\n", dst);
+// 		printf("OFFI :%zu\n", strlcat(dest, str, dstsize));
+// 		printf("OFFI :%s\n", dest);
+// 		printf("--------------------\n");
+// 		dstsize++;
+// 	}
+// }
