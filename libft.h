@@ -6,7 +6,7 @@
 /*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 16:03:39 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/25 13:48:45 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/25 17:46:52 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -147,7 +147,13 @@ void	ft_lstadd_front(t_list **lst, t_list *new);
 int		ft_lstsize(t_list *lst);
 
 //ft_lstlast
+t_list	*ft_lstlast(t_list *lst);
 
+//ft_lstadd_back
+void	ft_lstadd_back(t_list **lst, t_list *new);
+
+//ft_lstdelone
+void	ft_lstdelone(t_list *lst, void (*del)(void *));
 
 
 #endif

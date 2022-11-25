@@ -6,7 +6,7 @@
 /*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 13:48:58 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/25 14:00:51 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/25 17:27:23 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,9 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	int	index;
-
-	while (lst)
+	while (lst->next != NULL)
 	{
-		index++;
+		lst = lst->next;
 	}
 	return (lst);
 }
