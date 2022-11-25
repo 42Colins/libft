@@ -6,7 +6,7 @@
 /*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 16:03:39 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/24 11:11:29 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/25 13:48:45 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,11 @@
 # include <stdio.h>
 # include <stdlib.h>
 
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 //Part one
 /////////////////
 
@@ -128,5 +133,21 @@ void	ft_putendl_fd(char *s, int fd);
 
 //ft_putnbr_fd
 void	ft_putnbr_fd(int n, int fd);
+
+//Partie Bonus
+//////////////////
+
+//ft_lstnew
+t_list	*ft_lstnew(void *content);
+
+//ft_lstadd_front
+void	ft_lstadd_front(t_list **lst, t_list *new);
+
+//ft_lstsize
+int		ft_lstsize(t_list *lst);
+
+//ft_lstlast
+
+
 
 #endif

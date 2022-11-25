@@ -6,7 +6,7 @@
 #    By: cprojean <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/10 14:30:05 by cprojean          #+#    #+#              #
-#    Updated: 2022/11/19 17:09:48 by cprojean         ###   ########.fr        #
+#    Updated: 2022/11/25 14:08:43 by cprojean         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,9 +57,16 @@ SRCS =		ft_atoi.c               \
 			ft_putendl_fd.c         \
 			ft_putnbr_fd.c          \
 
+SRCS_bonus =
+			ft_lstnew.c             \
+			ft_lstadd_front.c       \
+			ft_lstlast.c            \
+			ft_lstsize.c            \
 
 
 OBJS =		${SRCS:.c=.o}
+
+OBJS_bonus =	${SRCS_bonus:.c=.o}
 
 all:		${NAME}
 
@@ -69,12 +76,17 @@ ${NAME} :	${OBJS}
 %.o : %.c	Makefile ${HEADERS}
 			$(CC) -c $(CFLAGS) $< -o $@
 
+${NAME_bonus} :	${OBJS} ${OBJS_bonus}
+				ar ${ARFLAGS} ${NAME} ${OBJS} ${OBJS_bonus}
+
+bonus :	all ${NAME_bonus}
+
 clean:
-			${RM} ${OBJS}
+			${RM} ${OBJS} ${OBJS_bonus}
 
 fclean:		clean
 			${RM} ${NAME}
 
 re :		fclean all
 
-.PHONY :	all make clean fclean re
+.PHONY :	all make clean fclean re bonus

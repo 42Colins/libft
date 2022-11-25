@@ -6,7 +6,7 @@
 /*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 00:08:37 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/24 18:07:31 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/25 12:51:36 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,13 +37,20 @@ int	how_many_words(char *str, char c)
 	return (count);
 }
 
-int	find_char(char *str, char c, int index)
+int	find_char(char *str, char c, int index, int bool)
 {
+	int	count;
+
+	count = 0;
 	while (str[index] == c)
 		index++;
+		count++;
 	while (str[index] && str[index] != c)
 		index++;
-	return (index);
+	if (bool == 0)
+		return (index);
+	else
+		return (count);
 }
 
 void	ft_filler(char *str, char *dst, int flag, char c)
@@ -51,7 +58,7 @@ void	ft_filler(char *str, char *dst, int flag, char c)
 	int	runner;
 	int	index;
 
-	index = find_char(str, c, flag);
+	index = find_char(str, c, flag, 0);
 	runner = 0;
 	while (str[flag] == c)
 		flag++;
@@ -85,7 +92,9 @@ char	**ft_split(char *str, char c)
 	int		index;
 	int		flag;
 	int		words;
+	int		count;
 
+	count = 0;
 	words = how_many_words(str, c);
 	index = 0;
 	flag = index;
@@ -96,8 +105,9 @@ char	**ft_split(char *str, char c)
 	while (runner < words)
 	{
 		flag = index;
-		index = find_char(str, c, index);
-		split[runner] = malloc(sizeof(char) * index - flag + 1);
+		count = find_char(str, c, index, 1);
+		index = find_char(str, c, index, 0);
+		split[runner] = malloc(sizeof(char) * (index - flag - count) + 1);
 		if (!split[runner])
 			free_all(split, runner);
 		ft_filler(str, split[runner], flag, c);
@@ -107,15 +117,15 @@ char	**ft_split(char *str, char c)
 	return (split);
 }
 
-int main()
-{
-	int i = 0;
-	char *src = "hello!zzzzzzzz";
-	char c = 'z';
-	char **split = ft_split(src, c);
-	while (split[i])
-	{
-		printf("%s\n", split[i]);
-		i++;
-	}
-}
+// int main()
+// {
+// 	int i = 0;
+// 	char *src = "hello!zzzzzzzz";
+// 	char c = 'z';
+// 	char **split = ft_split(src, c);
+// 	while (split[i])
+// 	{
+// 		printf("%s\n", split[i]);
+// 		i++;
+// 	}
+// }
