@@ -6,7 +6,7 @@
 #    By: cprojean <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/10 14:30:05 by cprojean          #+#    #+#              #
-#    Updated: 2022/11/26 15:13:51 by cprojean         ###   ########.fr        #
+#    Updated: 2022/11/27 15:51:03 by cprojean         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,7 +64,8 @@ SRCS_bonus =		ft_lstnew.c             \
 					ft_lstadd_back.c        \
 					ft_lstdelone.c          \
 					ft_lstclear.c           \
-					
+					ft_lstiter.c            \
+					ft_lstmap.c             \
 
 
 OBJS =				${SRCS:.c=.o}

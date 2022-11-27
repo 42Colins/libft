@@ -1,29 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/26 18:35:06 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/27 14:19:50 by cprojean         ###   ########.fr       */
+/*   Created: 2022/11/27 14:20:43 by cprojean          #+#    #+#             */
+/*   Updated: 2022/11/27 16:38:31 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstiter(t_list *lst, void (*f)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*array;
 	t_list	*next_array;
 
-	if (!lst || !f)
-		return ;
-	array = lst;
-	while (array)
+	if (!lst || !f || !del)
+		return (NULL);
+	array = ft_lstnew(f(lst -> content));
+	lst = lst -> next;
+	while (lst)
 	{
-		next_array = array->next;
-		f(array->content);
-		array = next_array;
+		next_array = ft_lstnew(f(lst -> content));
+		if (!next_array)
+		{
+			ft_lstclear(&array, (del));
+			return (NULL);
+		}
+		ft_lstadd_back(&array, next_array);
+		lst = lst -> next;
 	}
+	return (array);
 }

@@ -6,7 +6,7 @@
 /*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 16:03:39 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/26 15:13:31 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/27 15:50:48 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -157,5 +157,11 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 
 //ft_lstclear
 void	ft_lstclear(t_list **lst, void (*del)(void *));
+
+//ft_lstiter
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+
+//ft_lstmap
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif
