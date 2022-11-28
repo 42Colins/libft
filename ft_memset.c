@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cprojean <cprojean@42lyon.fr>              +#+  +:+       +#+        */
+/*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 12:55:44 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/09 17:32:42 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/28 16:41:50 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,16 +26,3 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (b);
 }
-/*
-int main()
-{
-	char *b[10];
-	char c;
-	size_t len;
-
-	c = 'c';
-	len = 5;
-	printf("%s\n", ft_memset(b, c, len));
-	printf("%s\n", memset(b, c, len));
-}
-*/

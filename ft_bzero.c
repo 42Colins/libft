@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cprojean <cprojean@42lyon.fr>              +#+  +:+       +#+        */
+/*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 14:02:45 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/09 17:33:46 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/28 16:40:55 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,3 @@ void	ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, '\0', n);
 }
-/*
-int main()
-{
-	char s[10];
-
-	s[0] = 'i';
-	ft_bzero(s, 5);
-	printf("%s", s);
-}
-*/

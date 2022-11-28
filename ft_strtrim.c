@@ -6,7 +6,7 @@
 /*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 13:08:31 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/24 17:09:09 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/28 16:43:02 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,8 +79,3 @@ char	*ft_strtrim(const char *s1, const char *set)
 		return (ft_error_case());
 	return (ft_substr(s1, count, size));
 }
-
-// int main ()
-// {
-// 	printf("%s", ft_strtrim("", ""));
-// }

@@ -6,7 +6,7 @@
 /*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 11:54:32 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/23 17:02:05 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/28 16:41:33 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-
-// int main ()
-// {
-// 	char s[7] = {0, 1, 2 ,3 ,4 ,5};
-
-// 	// if (ft_memchr(s, 2 + 256, 3) == NULL)
-// 	// 	printf("NULL\n");
-// 	printf("%p\n", ft_memchr(s, 258, 3));
-// 	if (memchr(s, 2 + 256, 3) == NULL)
-// 		printf("NULL\n");
-// 	printf("%p\n", memchr(s, 258, 3));
-// }

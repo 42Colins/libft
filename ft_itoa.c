@@ -6,7 +6,7 @@
 /*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 18:27:44 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/18 14:32:54 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/28 16:41:08 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,9 +71,3 @@ char	*ft_itoa(int n)
 		return (NULL);
 	return (ft_array_fill(array, count, n));
 }
-/*
-int main()
-{
-	int	nbr = -217;
-	printf("%s", ft_itoa(nbr));
-}*/

@@ -6,7 +6,7 @@
 /*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 11:23:52 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/24 11:12:29 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/28 16:43:07 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	array[index] = '\0';
 	return (array);
 }
-/*
-int main()
-{
-	char const *string = "lorem ipsum dolor sit amet";
-	unsigned int start = 15;
-	size_t len = 100;
-	printf("%s", ft_substr(string, start, len));
-}*/
