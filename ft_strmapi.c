@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cprojean <cprojean@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 14:45:16 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/28 16:42:40 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/28 17:40:12 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 	unsigned int		index;
 	char				*array;
 
+	if (!s || !f)
+		return (NULL);
 	array = malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (!array)
 		return (NULL);
