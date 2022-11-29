@@ -6,7 +6,7 @@
 /*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 15:41:24 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/15 15:56:58 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/28 16:42:53 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,14 +35,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
-/*
-int main()
-{
-	char	needle[9] = "ipsumm";
-	char	foin[45] = "lorem ipsum dolor sit amet";
-	size_t	size = 30;
-
-	printf("%s\n", ft_strnstr(foin, needle, size));
-	printf("%s", strnstr(foin, needle, size));
-}
-*/

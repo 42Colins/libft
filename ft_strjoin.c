@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cprojean <cprojean@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 13:52:31 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/23 16:03:37 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/28 17:39:53 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	array[runner + sizearray] = '\0';
 	return (array);
 }
-/*
-int main()
-{
-	const char *s1 = "salutcava";
-	const char *s2 = "superettoi";
-
-	printf("%s", ft_strjoin(s1, s2));
-}*/

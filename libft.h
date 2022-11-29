@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cprojean <cprojean@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 16:03:39 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/24 11:11:29 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/28 17:34:59 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,13 @@
 # define LIBFT_H
 
 # include <unistd.h>
-# include <string.h>
-# include <stdio.h>
 # include <stdlib.h>
 
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 //Part one
 /////////////////
 
@@ -128,5 +131,35 @@ void	ft_putendl_fd(char *s, int fd);
 
 //ft_putnbr_fd
 void	ft_putnbr_fd(int n, int fd);
+
+//Partie Bonus
+//////////////////
+
+//ft_lstnew
+t_list	*ft_lstnew(void *content);
+
+//ft_lstadd_front
+void	ft_lstadd_front(t_list **lst, t_list *new);
+
+//ft_lstsize
+int		ft_lstsize(t_list *lst);
+
+//ft_lstlast
+t_list	*ft_lstlast(t_list *lst);
+
+//ft_lstadd_back
+void	ft_lstadd_back(t_list **lst, t_list *new);
+
+//ft_lstdelone
+void	ft_lstdelone(t_list *lst, void (*del)(void *));
+
+//ft_lstclear
+void	ft_lstclear(t_list **lst, void (*del)(void *));
+
+//ft_lstiter
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+
+//ft_lstmap
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif

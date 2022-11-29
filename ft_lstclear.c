@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/08 15:51:24 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/28 16:42:32 by cprojean         ###   ########.fr       */
+/*   Created: 2022/11/25 18:27:24 by cprojean          #+#    #+#             */
+/*   Updated: 2022/11/26 18:29:14 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	size_t	index;
+	t_list	*array;
+	t_list	*next_array;
 
-	index = 0;
-	if (dstsize == 0)
-		return (ft_strlen(src));
-	while ((index < dstsize - 1) && (src[index]))
+	if (!lst || !del)
+		return ;
+	array = *lst;
+	while (array)
 	{
-		dst[index] = src[index];
-		index++;
+		next_array = array->next;
+		del(array->content);
+		free(array);
+		array = next_array;
 	}
-	dst[index] = '\0';
-	return (ft_strlen(src));
+	*lst = NULL;
+	return ;
 }

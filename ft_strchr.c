@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cprojean <cprojean@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 12:51:10 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/23 16:58:40 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/28 17:38:16 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int				runner;
-	unsigned char	character;
+	int		runner;
+	char	character;
 
 	character = c;
 	runner = 0;
