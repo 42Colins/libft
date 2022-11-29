@@ -6,7 +6,7 @@
 #    By: cprojean <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/10 14:30:05 by cprojean          #+#    #+#              #
-#    Updated: 2022/11/28 16:43:35 by cprojean         ###   ########.fr        #
+#    Updated: 2022/11/29 13:57:44 by cprojean         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,6 +56,7 @@ SRCS =				ft_atoi.c               \
 					ft_putstr_fd.c          \
 					ft_putendl_fd.c         \
 					ft_putnbr_fd.c          \
+
 
 SRCS_bonus =		ft_lstnew.c             \
 					ft_lstadd_front.c       \
