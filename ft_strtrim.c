@@ -25,11 +25,9 @@ char	*ft_error_case(void)
 
 int	ft_is_sep(char s1, const char *set)
 {
-	int	index;
 	int	runner;
 
 	runner = 0;
-	index = 0;
 	while (set[runner])
 	{
 		if (set[runner] == s1)
