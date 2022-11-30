@@ -6,7 +6,7 @@
 /*   By: cprojean <cprojean@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 16:03:39 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/28 17:34:59 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/30 18:13:34 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ typedef struct s_list
 /////////////////
 
 //ft_strlen
-int		ft_strlen(const char *s);
+size_t	ft_strlen(const char *s);
 
 //ft_calloc
 void	*ft_calloc(size_t count, size_t size);

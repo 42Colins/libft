@@ -6,7 +6,7 @@
 /*   By: cprojean <cprojean@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 13:03:53 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/30 18:12:27 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/30 18:14:17 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ char	**ft_split(char *str, char c)
 	split = malloc(sizeof(char *) * (words + 1));
 	if (!split)
 		return (NULL);
-	while (runner < words)
+	while ((int)runner < words)
 	{
 		index = find_sep(str, c, index);
 		size = word_size(str, c, index);
