@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cprojean <cprojean@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 13:08:31 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/28 16:43:02 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/30 18:10:48 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_error_case(void)
 
 int	ft_is_sep(char s1, const char *set)
 {
-	int	runner;
+	size_t	runner;
 
 	runner = 0;
 	while (set[runner])
@@ -61,10 +61,10 @@ int	ft_trim_this(const char *s1, const char *set, int index, int size)
 
 char	*ft_strtrim(const char *s1, const char *set)
 {
-	int	index;
-	int	size;
-	int	count;
-	int	second;
+	size_t	index;
+	size_t	size;
+	int		count;
+	int		second;
 
 	if (!(s1 && set))
 		return (NULL);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cprojean <cprojean@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 13:03:53 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/28 16:42:08 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/30 18:12:27 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,9 +74,9 @@ void	*free_all(char **str, int runner)
 char	**ft_split(char *str, char c)
 {
 	char	**split;
-	int		runner;
+	size_t	runner;
 	int		words;
-	int		index;
+	size_t	index;
 	int		size;
 
 	runner = 0;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cprojean <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cprojean <cprojean@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 13:40:11 by cprojean          #+#    #+#             */
-/*   Updated: 2022/11/25 14:46:48 by cprojean         ###   ########.fr       */
+/*   Updated: 2022/11/30 18:12:39 by cprojean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	int	index;
+	size_t	index;
 
 	index = 0;
 	while (lst)
